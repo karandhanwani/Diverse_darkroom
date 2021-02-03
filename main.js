@@ -6,10 +6,15 @@ const selectElement = function (element) {
 let menuToggler = selectElement('.menu-toggle');
 let body = selectElement('body');
 
+//toggling menu using nav links in "mobile view" only
+const toggle = () => {
+    let menu=body.classList[0];
+    if(menu==="open")
+        body.classList.toggle('open');
+}
+
 menuToggler.addEventListener('click' , function(){
     body.classList.toggle('open');
-    
-
 });
 
 //contact us

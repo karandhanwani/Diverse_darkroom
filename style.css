@@ -119,6 +119,9 @@ header{
 .open .fas.fa-bars{
     display: none;
 }
+.fa-bars{
+    text-shadow: 0px 0px 2.6px black;
+}
 .open .nav-list{
     transform: translateX(0);
 }
