@@ -15,10 +15,8 @@ def FormSubmit(request):
         client.client_message = request.POST['message']
         client.message_draft_on = timezone.now().date()
         client.save()
-        print(client.message_draft_on)
         sendUserInfoToMail(client)
         return redirect('/')
-        # return render(request,'index.html',{'succes':"Form Submitted"})
     else:
         return render(request,'index.html',{'error':"A Problem occured, Form can't be submitted"})
 
@@ -31,6 +29,4 @@ def sendUserInfoToMail(client):
         [''],               # Recievers Email
     )
     email.fail_silently = True
-    print(client.message_draft_on)
     email.send()
-    print(client.message_draft_on)
