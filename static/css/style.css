@@ -151,7 +151,8 @@ header{
 .hero{
     width: 100%;
     height: 100vh;
-    background: url("images/obg5.jpg") center no-repeat;
+    /* background: url("{{ STATIC_URL }}/images/obg5.jpg") center no-repeat; */
+    background: url("/static/css/images/obg5.jpg") center no-repeat;
     background-size: cover;
     
     display: flex;
